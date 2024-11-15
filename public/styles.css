@@ -254,6 +254,7 @@ body {
     text-align: center;
 }
 
+
 .projects {
     padding: 40px 20px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -263,19 +264,34 @@ body {
     gap: 20px;
     flex-wrap: wrap; /* Allow wrapping of cards */
     overflow-x: auto; /* Horizontal scrolling if needed */
+    margin: 0 auto;
 }
 
-/* Media Query for smaller screens */
+/* Media Query for Smaller Screens (Tablets, Phones) */
 @media (max-width: 768px) {
     .projects {
         padding: 20px 10px;
         gap: 15px; /* Reduce gap on smaller screens */
     }
 
+    /* Project Card Adjustments */
     .project-card {
         width: 100%; /* Make cards take full width on small screens */
-        max-width: 300px; /* Limit card width */
+        max-width: 100%; /* Prevent the cards from being too wide */
         margin: 10px 0; /* Add vertical margin for spacing */
+    }
+}
+
+/* Media Query for Larger Screens (Desktops, Laptops) */
+@media (min-width: 769px) {
+    .projects {
+        padding: 40px 20px;
+        gap: 20px; /* Maintain a larger gap between cards */
+    }
+
+    .project-card {
+        width: 30%; /* Each card will take 30% of the row */
+        max-width: 300px; /* Limit card width */
     }
 }
 
@@ -285,10 +301,10 @@ body {
     border: 1px solid #00E5FF; /* Neon border */
     border-radius: 10px;
     padding: 20px;
-    width: 300px; /* Fixed width for larger screens */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
+    max-width: 300px; /* Prevent card from becoming too wide */
 }
 
 /* Project Card Hover Effect */
@@ -313,6 +329,7 @@ body {
     font-size: 1rem;
     padding: 10px 15px;
 }
+
 
 /* Contact Section */
 .contact {
