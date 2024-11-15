@@ -250,6 +250,10 @@ body {
 
 
 /* Projects Section */
+.projects-h2{
+    text-align: center;
+}
+
 .projects {
     padding: 40px 20px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -257,29 +261,37 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Horizontal scrolling for cards */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    overflow-x: auto; /* Horizontal scrolling if needed */
 }
 
-.projects-h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #00E5FF;
-    text-shadow: 1px 1px 3px #007BFF;
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .projects {
+        padding: 20px 10px;
+        gap: 15px; /* Reduce gap on smaller screens */
+    }
+
+    .project-card {
+        width: 100%; /* Make cards take full width on small screens */
+        max-width: 300px; /* Limit card width */
+        margin: 10px 0; /* Add vertical margin for spacing */
+    }
 }
 
+/* Project Cards */
 .project-card {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
-    border: 1px solid #00E5FF;
+    border: 1px solid #00E5FF; /* Neon border */
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
+    width: 300px; /* Fixed width for larger screens */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
 }
 
+/* Project Card Hover Effect */
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
