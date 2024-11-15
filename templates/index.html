@@ -1,44 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team-X</title>
+    <title>Team-X | Hackathon Innovators</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Header Section -->
     <header class="header">
-        <h1>Welcome to Team-X's Official Website</h1>
-        <p>Meet the coders behind our amazing hackathon projects!</p>
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">Team-X</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to Team-X's Official Website</h1>
+            <p>We are the coders crafting innovative solutions at every hackathon!</p>
+            <a href="#projects" class="btn">Explore Our Projects</a>
+        </div>
     </header>
 
-    <main class="team-container">
-        <!-- Member 1 -->
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Team-X is a group of passionate developers and problem-solvers. Together, we leverage our diverse skills to
+            design cutting-edge applications, compete in hackathons, and tackle real-world challenges with creativity
+            and precision.</p>
+    </section>
+
+
+    <!-- Team Section -->
+    <h2 style="text-align: center;">Meet the Team</h2>
+    <section id="team" class="team-container">
         <div class="card">
-            <img src="arnav image.jpg" alt="Alice" class="card-img">
+            <img src="arnav image.jpg" alt="Arnav" class="card-img">
             <div class="card-content">
-                <h2>Arnav</h2>
+                <h3>Arnav</h3>
                 <p>Backend Developer</p>
+                <p>Specializes in building efficient server-side applications and optimizing APIs.</p>
             </div>
         </div>
 
-        <!-- Member 2 -->
         <div class="card">
-            <img src="gauransh image.jpg" alt="Bob" class="card-img">
+            <img src="gauransh image.jpg" alt="Gauransh" class="card-img">
             <div class="card-content">
-                <h2>Gauransh</h2>
+                <h3>Gauransh</h3>
                 <p>Frontend Developer</p>
+                <p>Passionate about creating stunning user interfaces and seamless user experiences.</p>
             </div>
         </div>
 
-        <!-- Member 3 -->
         <div class="card">
-            <img src="vedansh image.webp" alt="Charlie" class="card-img">
+            <img src="vedansh image.webp" alt="Vedansh" class="card-img">
             <div class="card-content">
-                <h2>Vedansh</h2>
+                <h3>Vedansh</h3>
                 <p>Full-Stack Developer</p>
+                <p>Expert in combining frontend and backend technologies to deliver complete solutions.</p>
             </div>
         </div>
-    </main>
+    </section>
+
+
+    <!-- Projects Section -->
+    <h2 class="projects-h2">Our Projects</h2>
+    <section id="projects" class="projects">
+        <div class="project-card">
+            <h3>Project Alpha</h3>
+            <p>An AI-powered chatbot for customer support, built using Python and Flask.</p>
+            <a href="https://github.com/team-x/project-alpha" target="_blank" class="btn">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Hackathon Tracker</h3>
+            <p>A web app for discovering and tracking hackathons worldwide, developed with React.js.</p>
+            <a href="https://github.com/team-x/hackathon-tracker" target="_blank" class="btn">View on GitHub</a>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/example" method="POST" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>You can also reach us via email at <a href="mailto:teamx@example.com">teamx@example.com</a>.</p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Team-X. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://linkedin.com/in/teamx" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/team-x" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/teamx" target="_blank">Twitter</a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>
