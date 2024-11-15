@@ -27,20 +27,21 @@ app.get('/', (req, res) => {
 // Handle form submission and store the data in MongoDB
 app.post('/contact', async (req, res) => {
     try {
-        const { name, email, message } = req.body;
+        console.log('posted')
+        // const { name, email, message } = req.body;
         
-        // Create a new contact message document
-        const newMessage = new ContactMessage({
-            name,
-            email,
-            message,
-        });
+        // // Create a new contact message document
+        // const newMessage = new ContactMessage({
+        //     name,
+        //     email,
+        //     message,
+        // });
 
-        // Save the message to MongoDB
-        await newMessage.save();
+        // // Save the message to MongoDB
+        // await newMessage.save();
 
-        // Respond with a success message
-        res.status(200).json({ message: 'Your message has been sent!' });
+        // // Respond with a success message
+        // res.status(200).json({ message: 'Your message has been sent!' });
 
     } catch (error) {
         console.error('Error saving contact message:', error);
