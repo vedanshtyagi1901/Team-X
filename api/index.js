@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 // Connect to MongoDB without the deprecated options
-mongoose.connect('mongodb+srv://vedanshtyagi245:Dlpe65zp7wdUGhsx@cluster0.vos9i.mongodb.net/TEAM-X?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://vedanshtyagi245:vkRiraqwXFTeCimb@cluster0.2efdi.mongodb.net/team-x?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.log('MongoDB connection error:', err));
 
